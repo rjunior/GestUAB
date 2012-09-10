@@ -99,6 +99,9 @@
     <Reference Include="Raven.Client.UniqueConstraints">
       <HintPath>..\packages\RavenDB.Client.UniqueConstraints.1.0.960\lib\net40\Raven.Client.UniqueConstraints.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +133,13 @@
     <Compile Include="Modules\ValidationModule.cs" />
     <Compile Include="Extensions\CustomAttributes.cs" />
     <Compile Include="Extensions\FormType.cs" />
+    <Compile Include="Models\Memorandum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Database\PopulateMemorandum.cs" />
+    <Compile Include="Modules\MemorandumModule.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -190,9 +200,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Views\Home\about.cshtml" />
+    <None Include="Views\Memorandum\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Memorandum\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config">

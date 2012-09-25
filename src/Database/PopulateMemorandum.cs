@@ -41,7 +41,11 @@ namespace GestUAB
                 session.SaveChanges ();
             }
 
+<<<<<<< HEAD
             ds.DatabaseCommands.PutIndex("MemorandumById", new IndexDefinitionBuilder<Course>
+=======
+            ds.DatabaseCommands.PutIndex("MemorandumById", new IndexDefinitionBuilder<Memorandum>
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
             {
                 Map = memorandums => from memorandum in memorandums
                                select new { memorandum.Id },

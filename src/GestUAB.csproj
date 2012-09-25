@@ -44,17 +44,14 @@
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Nancy.ViewEngines.Razor">
-      <HintPath>..\packages\Nancy.Viewengines.Razor.0.11.0\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor">
-      <HintPath>..\packages\Nancy.Viewengines.Razor.0.11.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.12.1\lib\net40\Nancy.ViewEngines.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.ViewEngines.Razor.BuildProviders">
-      <HintPath>..\packages\Nancy.Viewengines.Razor.0.11.0\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll</HintPath>
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.12.1\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="HtmlTags">
-      <HintPath>..\packages\HtmlTags.1.1.0.73\lib\4.0\HtmlTags.dll</HintPath>
+      <HintPath>..\packages\HtmlTags.1.1.0.111\lib\4.0\HtmlTags.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Database">
       <HintPath>..\packages\RavenDB.Database.1.0.960\lib\net40\Raven.Database.dll</HintPath>
@@ -81,26 +78,28 @@
       <HintPath>..\packages\RavenDB.Client.1.0.960\lib\net40\Raven.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.Hosting.Aspnet">
-      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.11.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
-    </Reference>
-    <Reference Include="Nancy">
-      <HintPath>..\packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.12.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="FluentValidation">
-      <HintPath>..\packages\FluentValidation.3.3.1.0\lib\Net40\FluentValidation.dll</HintPath>
-    </Reference>
-    <Reference Include="Nancy.Validation.FluentValidation">
-      <HintPath>..\packages\Nancy.Validation.FluentValidation.0.11.0\lib\net40\Nancy.Validation.FluentValidation.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\System.Web.Mvc\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Raven.Client.UniqueConstraints">
       <HintPath>..\packages\RavenDB.Client.UniqueConstraints.1.0.960\lib\net40\Raven.Client.UniqueConstraints.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Microsoft.Web.Infrastructure">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+=======
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.3.4.6.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Nancy.Viewengines.Razor.0.12.1\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.0.12.1\lib\net40\Nancy.dll</HintPath>
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -133,76 +132,26 @@
     <Compile Include="Modules\ValidationModule.cs" />
     <Compile Include="Extensions\CustomAttributes.cs" />
     <Compile Include="Extensions\FormType.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\Memorandum.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Database\PopulateMemorandum.cs" />
     <Compile Include="Modules\MemorandumModule.cs">
+=======
+    <Compile Include="Modules\MemorandumModule.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Models\Memorandum.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Database\PopulateMemorandum.cs">
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Views\Home\index.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\Shared\_layout.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\js\jquery.deserialize.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\css\bootstrap.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\css\bootstrap.min.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\css\bootstrap-responsive.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\css\bootstrap-responsive.min.css">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\img\glyphicons-halflings.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\img\glyphicons-halflings-white.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\js\bootstrap.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\js\bootstrap.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\js\jquery-1.7.2.min.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\Shared\_errors.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Content\js\crud.js" />
-    <None Include="Views\Course\show.cshtml" />
-    <None Include="Views\Course\index.cshtml" />
-    <None Include="Views\Course\new.cshtml" />
-    <None Include="Views\Course\edit.cshtml" />
-    <None Include="Views\User\new.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\User\edit.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\User\show.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\User\index.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Views\Home\about.cshtml" />
-    <None Include="Views\Memorandum\index.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -218,6 +167,104 @@
     <Content Include="Content\js\validation.js" />
     <Content Include="Content\js\jquery.validate.unobtrusive.js" />
     <Content Include="Content\js\jquery-1.8.1.min.js" />
+    <Content Include="Views\Home\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Home\about.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_errors.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_layout.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\User\edit.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\User\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\User\new.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\User\show.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\bootstrap.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\bootstrap.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\bootstrap-responsive.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\bootstrap-responsive.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\img\glyphicons-halflings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\img\glyphicons-halflings-white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery.deserialize.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\bootstrap.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\bootstrap.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\jquery-1.7.2.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\js\crud.js" />
+    <Content Include="Views\Course\show.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Course\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Course\new.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Course\edit.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Memorandum\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Memorandum\new.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Memorandum\show.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Memorandum\edit.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Memorandum\_form.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+<<<<<<< HEAD
+    </None>
+    <None Include="Views\Home\about.cshtml" />
+    <None Include="Views\Memorandum\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Memorandum\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+=======
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

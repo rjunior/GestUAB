@@ -12,6 +12,15 @@ namespace GestUAB
 {
     public class Memorandum : IModel
     {
+<<<<<<< HEAD
+=======
+        [GlobalizedEnum(typeof(MemorandumType), "Geral", "Diária")]
+        public enum MemorandumType {
+            General,
+            DailyRate
+        }
+
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
         public Memorandum ()
         {
             Id = Guid.NewGuid();
@@ -70,7 +79,12 @@ namespace GestUAB
         [Display(Name = "Diaria solicitada",
                  Description= "Tipo de diaria solicitada.")]
         [ScaffoldVisibility(all:ScaffoldVisibilityType.Show)] 
+<<<<<<< HEAD
         public int Type { get ; set ; }
+=======
+        [ScaffoldSelectProperties("", SelectType.Single)]
+        public MemorandumType Type { get ; set ; }
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
     }
 
     public class MemorandumValidator : ValidatorBase<Memorandum>
@@ -88,6 +102,7 @@ namespace GestUAB
                     .NotEmpty ().WithMessage ("O destino é obrigatório.");
             }
             RuleSet ("Update", () => {
+<<<<<<< HEAD
 //                RuleFor (user => user.FirstName)
 //                    .NotEmpty ().WithMessage ("O campo nome é obrigatório.")
 //                    .Matches (@"^[a-zA-Z\u00C0-\u00ff\s]*$").WithMessage ("Insira somente letras.")
@@ -96,6 +111,16 @@ namespace GestUAB
 //                    .NotEmpty ().WithMessage ("O campo sobrenome é obrigatório.")
 //                    .Matches (@"^[a-zA-Z\u00C0-\u00ff\s]*$").WithMessage ("Insira somente letras.")
 //                    .Length (2, 30).WithMessage ("O nome deve conter entre 2 e 30 caracteres.");
+=======
+                RuleFor (memorandum => memorandum.RequesterName)
+                    .NotEmpty ().WithMessage ("O nome do requerente é obrigatório.")
+                    .Length (5, 50).WithMessage ("O nome do requerente deve conter entre 5 e 50 caracteres.")
+                        .Matches (@"^[a-zA-Z][a-zA-Z0-9_]*\.?[a-zA-Z0-9_]*$").WithMessage ("Insira somente letras.");
+                RuleFor (memorandum => memorandum.Observation)
+                    .NotEmpty ().WithMessage ("A observaçao é obrigatório.");
+                RuleFor (memorandum => memorandum.Destiny)
+                    .NotEmpty ().WithMessage ("O destino é obrigatório.");
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
             }
             );
         }

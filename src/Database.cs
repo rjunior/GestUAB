@@ -29,6 +29,7 @@ using Raven.Abstractions.Indexing;
 using Raven.Client;
 using Raven.Client.Indexes;
 using System;
+using System.Reflection;
 
 namespace GestUAB
 {
@@ -127,10 +128,25 @@ namespace GestUAB
     {
 		public static void PopulateAll (this IDocumentStore ds)
 		{
+<<<<<<< HEAD
 			// Put populate methods here
 			ds.PopulateUsers();
 			ds.PopulateCourses();
             ds.PopulateMemorandum();
+=======
+            MethodInfo[] methodInfos = typeof(PopulateDatabaseExtensions).GetMethods(BindingFlags.Public | BindingFlags.Static);
+
+            foreach (MethodInfo methodInfo in methodInfos)
+            {
+                if (methodInfo.Name.Contains("Populate") && !methodInfo.Name.Contains("PopulateAll"))
+                {
+                    Console.Write("Executing " + methodInfo.Name);
+                    object[] parametersArray = new object[] { ds };
+
+                    methodInfo.Invoke(ds, parametersArray);
+                }
+            }
+>>>>>>> 4ecf3330985035e0b554cac0c1da3926a12adea3
 		}
 	}
 
